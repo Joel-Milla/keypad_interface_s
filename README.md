@@ -11,6 +11,7 @@ Created `main.h` file to improve interaction with hardware registers:
   - **GPIOx_ODR_t**: Defines the output data register structure to control the output state of GPIO pins.
   - **GPIOx_IDR_t**: Structure for the input data register to check real-time pin values.
   - **GPIOx_PUPDR_t**: Allows setting pull-up/pull-down resistors on GPIO pins, enhancing input signal.
+- Moreover, the code uses MACROS for better readability of code.
 
 ## Hardware and Tools
 - **Microcontroller**: STM32F407
