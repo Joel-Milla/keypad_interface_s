@@ -10,6 +10,22 @@
 
 #include <stdint.h>
 
+// Define macros
+// Address to access hardware registers
+#define ADDR_REG_AHB1ENR ((RCC_AHB1ENR_t*) 0x40023830 )
+#define ADDR_REG_GPIOD_MODE ((GPIOx_MODE_t*) 0x40020C00 )
+#define ADDR_REG_GPIOD_OUTPUT_DATA ((GPIOx_ODR_t*) 0x40020C14 )
+#define ADDR_REG_GPIOD_INPUT_DATA ((GPIOx_IDR_t*) 0x40020C10 )
+#define ADDR_REG_RESISTOR ((GPIOx_PUPDR_t*) 0x40020C0C )
+
+// To enable clock, pins, and LEDS
+#define CLOCK_ENABLE (1)
+#define MODE_CONF_OUTPUT (1)
+#define MODE_CONF_INPUT (0)
+#define MODE_CONF_PULLUP_RESISTORS (1)
+#define SET_ROW_LOW (0)
+#define SET_ROW_HIGH (1)
+#define DELAY_COUNT (300000UL) // This tells the compiler the number is unsigned long - 32b
 
 // Type for AHB1 peripheral clock enable register to enable the clocks on AHB1 (RCC_AHB1ENR)
 typedef struct
